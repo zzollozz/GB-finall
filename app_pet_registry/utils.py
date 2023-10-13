@@ -27,7 +27,3 @@ class Human_friends(Animal):
 class Vyuchnie_zivotvie(Animal):
     pass
 
-
-if __name__ == "__main__":
-    cat = Animal('Жужа', '2000-10-19')
-    print(cat)

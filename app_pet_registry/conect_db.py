@@ -48,7 +48,6 @@ class Databases:
         print("Запись добавлена")
 
     def read_table(self, select_query):
-        # select_all_rows = f"SELECT * FROM {table}"
         cursor = self.connection.cursor()
         cursor.execute(select_query)
         return cursor.fetchall()
@@ -59,14 +58,3 @@ class Databases:
         self.connection.commit()
         print("Изменения внесены")
 
-
-if __name__ == "__main__":
-
-    a = Databases()
-    # for i in a.list_of_tables_db():
-    #     print(i)
-
-    # a.add_animals('Zuc', '2000-02-02', 'подает голос', 'cat')
-
-    for i in a.read_table('cat'):
-        print(i)
