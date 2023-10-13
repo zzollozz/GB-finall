@@ -45,17 +45,20 @@ class Databases:
         cursor = self.connection.cursor()
         cursor.execute(insert_query)
         self.connection.commit()
+        print("Запись добавлена")
 
-    def read_table(self, table):
-        select_all_rows = f"SELECT * FROM {table}"
+    def read_table(self, select_query):
+        # select_all_rows = f"SELECT * FROM {table}"
         cursor = self.connection.cursor()
-        cursor.execute(select_all_rows)
+        cursor.execute(select_query)
         return cursor.fetchall()
 
+    def update_table(self, select_query):
+        cursor = self.connection.cursor()
+        cursor.execute(select_query)
+        self.connection.commit()
+        print("Изменения внесены")
 
-    # def process_cursor(self, query):
-    #     cursor = self.connection.cursor()
-    #     return cursor.execute(query)
 
 if __name__ == "__main__":
 

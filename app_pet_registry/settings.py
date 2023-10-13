@@ -8,7 +8,6 @@ REMOTE_SERVER_NAME = env('REMOTE_SERVER_NAME')
 REMOTE_SERVER_PASS = env('REMOTE_SERVER_PASS')
 DATABASES_PASS = env('DATABASES_PASS')
 
-
 MAIN_MENU = """
 +---------------------------------------+
 |          -= М Е Н Ю =-                |
